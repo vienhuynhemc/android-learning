@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Giải phương trình bậc 1</string>
+    <string name="editText_1">4</string>
+    <string name="textView_1">X    +</string>
+    <string name="editText_2">-5</string>
+    <string name="textView_2">=</string>
+    <string name="button_1">Giải phương tình</string>
+    <string name="textView_3">Thông tin kết quả</string>
+    <string name="error_1">Vui lòng điền đầy đủ hệ số A,B,C</string>
+    <string name="result_1">Nghiệm:     </string>
+    <string name="editText_3">0</string>
+</resources>
