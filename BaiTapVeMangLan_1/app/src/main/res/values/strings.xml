@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sắp xếp mảng</string>
+    <string name="button_1">Tạo mới mảng</string>
+    <string name="button_2">Sắp xếp</string>
+</resources>
