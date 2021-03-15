@@ -30,6 +30,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         android:text="@string/button_1"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/textView_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

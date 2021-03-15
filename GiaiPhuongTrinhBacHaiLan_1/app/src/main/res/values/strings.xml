@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Giải phương trình bậc 2</string>
+    <string name="textView_1">X</string>
+    <string name="editText_1">4</string>
+    <string name="textView_2">2</string>
+    <string name="textView_3">+</string>
+    <string name="editText_2">3</string>
+    <string name="editText_3">20</string>
+    <string name="textView_6">=</string>
+    <string name="editText_4">0</string>
+    <string name="button_1">Giải phương trình</string>
+    <string name="textView_7">Kết quả</string>
+</resources>
