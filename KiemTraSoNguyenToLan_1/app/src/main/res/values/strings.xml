@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Kiểm tra số nguyên tố</string>
+    <string name="editText_1">Mời bạn nhập số cần kiểm tra</string>
+    <string name="button_1">Kiểm tra</string>
+    <string name="textView_1">Kết quả</string>
+</resources>

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "KiemTraSoNguyenTo-Lan_1"
