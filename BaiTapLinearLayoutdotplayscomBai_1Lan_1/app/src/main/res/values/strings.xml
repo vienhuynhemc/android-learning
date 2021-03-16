@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BaiTapLinearLayout-dotplays.com-Bai_1-Lan_1</string>
+    <string name="editText_1">Enter Email</string>
+    <string name="editText_2">Enter Password</string>
+    <string name="button_1">Login</string>
+    <string name="checkBox_1">Remember password</string>
+</resources>
