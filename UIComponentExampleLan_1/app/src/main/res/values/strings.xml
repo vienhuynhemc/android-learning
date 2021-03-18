@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">UIComponentExample-Lan_1</string>
+    <string name="editText_1">Họ và tên</string>
+    <string name="editText_2">Điện thoại</string>
+    <string name="editText_3">Email</string>
+    <string name="editText_4">Địa chỉ</string>
+    <string name="button_1">Ngày sinh</string>
+    <string name="radioButton_1">Nam</string>
+    <string name="radioButton_2">Nữ</string>
+    <string name="editText_5">Nhóm với ai (nếu có)</string>
+    <string name="textView_2">Khóa học</string>
+    <string name="checkBox_1">Android</string>
+    <string name="checkBox_2">Web</string>
+    <string name="checkBox_3">IC3</string>
+    <string name="button_2">Xong</string>
+</resources>
