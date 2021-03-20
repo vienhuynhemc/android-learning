@@ -94,6 +94,7 @@
         app:layout_constraintTop_toBottomOf="@id/editText_4">
 
         <RadioButton
+            android:id="@+id/radioButton_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingEnd="30dp"
@@ -101,20 +102,22 @@
             tools:ignore="RtlSymmetry" />
 
         <RadioButton
+            android:id="@+id/radioButton_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radioButton_2" />
 
     </RadioGroup>
 
-    <EditText
+    <AutoCompleteTextView
+        android:inputType="text"
+        android:completionThreshold="1"
         android:id="@+id/editText_5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:hint="@string/editText_5"
-        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_1"
@@ -133,7 +136,6 @@
         android:id="@+id/checkBox_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checked="true"
         android:text="@string/checkBox_1"
         app:layout_constraintStart_toStartOf="@id/button_1"
         app:layout_constraintTop_toBottomOf="@id/textView_2" />

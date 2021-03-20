@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/act_imageView_1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:paddingTop="5sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/act_textView_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/act_imageView_1"
+        app:layout_constraintTop_toTopOf="@id/act_imageView_1" />
+
+    <ImageView
+        android:id="@+id/act_imageView_2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/act_imageView_1"
+        app:layout_constraintStart_toEndOf="@id/act_imageView_1"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/act_textView_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3sp"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@id/act_imageView_2"
+        app:layout_constraintTop_toTopOf="@id/act_imageView_2"
+        tools:ignore="SmallSp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
