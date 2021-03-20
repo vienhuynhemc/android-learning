@@ -6,4 +6,15 @@
     <string name="register_editText_4">Địa chỉ</string>
     <string name="register_button_1">Chọn ngày sinh</string>
     <string name="register_textView_1">D: 01, M: 01, Y: 2000</string>
+    <string name="register_textView_2">Chọn giới tính:</string>
+    <string name="register_radioButton_1">Nam</string>
+    <string name="register_radioButton_2">Nữ</string>
+    <string name="register_autoCompleteTextView_1">Nhóm với ai (nếu có)</string>
+    <string name="register_button_2">Thêm vào nhóm</string>
+    <string name="register_button_3">Thêm học viên mới</string>
+    <string name="register_textView_3">Khóa học</string>
+    <string name="register_checkBox_1">Android</string>
+    <string name="register_checkBox_2">Web</string>
+    <string name="register_checkBox_3">IC3</string>
+    <string name="register_button_4">Xong</string>
 </resources>

@@ -91,10 +91,10 @@
                 tools:ignore="Autofill" />
 
             <Button
-                android:layout_marginStart="5dp"
                 android:id="@+id/register_button_1"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
                 android:text="@string/register_button_1"
                 android:textAllCaps="false"
@@ -105,11 +105,136 @@
                 android:id="@+id/register_textView_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/register_textView_1"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="15dp"
+                android:text="@string/register_textView_1"
                 app:layout_constraintStart_toEndOf="@id/register_button_1"
                 app:layout_constraintTop_toTopOf="@id/register_button_1" />
+
+            <TextView
+                android:id="@+id/register_textView_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/register_textView_2"
+                app:layout_constraintStart_toStartOf="@id/register_button_1"
+                app:layout_constraintTop_toBottomOf="@id/register_button_1" />
+
+            <RadioGroup
+                android:id="@+id/register_radioGroup_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/register_textView_2"
+                app:layout_constraintTop_toBottomOf="@id/register_button_1">
+
+                <RadioButton
+                    android:id="@+id/register_radioButton_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_radioButton_1" />
+
+                <RadioButton
+                    android:id="@+id/register_radioButton_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/register_radioButton_2" />
+            </RadioGroup>
+
+            <AutoCompleteTextView
+                android:id="@+id/register_autoCompleteTextView_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:completionThreshold="1"
+                android:hint="@string/register_autoCompleteTextView_1"
+                android:inputType="text"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register_radioGroup_1" />
+
+            <Button
+                android:id="@+id/register_button_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_button_2"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="@id/register_button_1"
+                app:layout_constraintTop_toBottomOf="@id/register_autoCompleteTextView_1" />
+
+            <Button
+                android:id="@+id/register_button_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_button_3"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@id/register_autoCompleteTextView_1"
+                app:layout_constraintTop_toTopOf="@id/register_button_2" />
+            
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/register_recyclerView_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintHeight_max="200dp"
+                app:layout_constrainedHeight="true"
+                app:layout_constraintTop_toBottomOf="@id/register_button_2"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_textView_3"
+                android:id="@+id/register_textView_3"
+                app:layout_constraintTop_toBottomOf="@id/register_recyclerView_1"
+                app:layout_constraintStart_toStartOf="@id/register_button_2"
+                />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_checkBox_1"
+                app:layout_constraintTop_toBottomOf="@id/register_textView_3"
+                app:layout_constraintStart_toStartOf="@id/register_textView_3"
+                android:text="@string/register_checkBox_1"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_checkBox_2"
+                app:layout_constraintTop_toBottomOf="@id/register_checkBox_1"
+                app:layout_constraintStart_toStartOf="@id/register_textView_3"
+                android:text="@string/register_checkBox_2"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_checkBox_3"
+                app:layout_constraintTop_toBottomOf="@id/register_checkBox_2"
+                app:layout_constraintStart_toStartOf="@id/register_textView_3"
+                android:text="@string/register_checkBox_3"/>
+
+            <Button
+                app:layout_constraintTop_toBottomOf="@id/register_checkBox_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_button_4"
+                android:textAllCaps="false"
+                android:id="@+id/register_button_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="40dp"
+                />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
