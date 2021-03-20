@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UIComponentExampleAdvanceLv2-Lan_1</string>
+    <string name="register_editText_1">Họ và tên</string>
+    <string name="register_editText_2">Điện thoại</string>
+    <string name="register_editText_3">Email</string>
+    <string name="register_editText_4">Địa chỉ</string>
+    <string name="register_button_1">Chọn ngày sinh</string>
+    <string name="register_textView_1">D: 01, M: 01, Y: 2000</string>
+</resources>
