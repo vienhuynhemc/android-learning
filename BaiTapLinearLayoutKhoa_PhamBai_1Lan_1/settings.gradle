@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "BaiTapLinearLayout-Khoa_Pham-Bai_1-Lan_1"
