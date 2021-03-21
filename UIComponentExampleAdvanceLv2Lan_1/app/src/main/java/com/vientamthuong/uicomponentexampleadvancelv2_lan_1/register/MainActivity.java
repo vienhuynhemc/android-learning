@@ -1,19 +1,17 @@
 package com.vientamthuong.uicomponentexampleadvancelv2_lan_1.register;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.DatePickerDialog;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.vientamthuong.uicomponentexampleadvancelv2_lan_1.R;
 import com.vientamthuong.uicomponentexampleadvancelv2_lan_1.autoCompleteStudent.ArrayAdapterAutoCompleteStudent;
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     // button
     private Button btChonNgaySinh;
     private Button btThemVaoNhom;
-    private Button btThemHocVienMoi;
     // textView
     private TextView tvHienThiNgaySinh;
     // radiobutton
@@ -60,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
 
     // Liên quan đến danh sách nhóm
     private StudentRecyclerViewAdapter studentRecyclerViewAdapter;
+
+    // Biến để nhận dữ liệu từ intent
+    public static int FROM_MAIN_ACTIVITY = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
         // button
         btChonNgaySinh = findViewById(R.id.register_button_1);
         btThemVaoNhom = findViewById(R.id.register_button_2);
-        btThemHocVienMoi = findViewById(R.id.register_button_3);
         // textView
         tvHienThiNgaySinh = findViewById(R.id.register_textView_1);
         // radiobutton
@@ -203,5 +203,6 @@ public class MainActivity extends AppCompatActivity {
             tvHienThiNgaySinh.setText(birthDay.toString());
         }, 2000, 0, 1);
     }
+
 
 }
