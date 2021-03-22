@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RandomORG-Khoa_Pham-Lan_1</string>
+    <string name="editText_2">Nhập số thứ 2</string>
+    <string name="editText_1">Nhập số thứ nhất</string>
+    <string name="button_1">Tạo số</string>
+    <string name="textView_2">0</string>
+    <string name="textView_1">Random ORG</string>
+</resources>
