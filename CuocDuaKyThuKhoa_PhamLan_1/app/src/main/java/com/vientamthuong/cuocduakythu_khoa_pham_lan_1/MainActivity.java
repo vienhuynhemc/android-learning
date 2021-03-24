@@ -172,10 +172,6 @@ public class MainActivity extends AppCompatActivity {
         }
         String result = check ? animalWin + " chiến thắng, bạn đã THẮNG cá cược!" : animalWin + " chiến thắng, bạn đã THUA cá cược";
         showNotification(result);
-        // cho các con vật về vị trí ban đầu
-        sbCho.setProgress(0);
-        sbHeo.setProgress(0);
-        sbHuou.setProgress(0);
         // cho các component trở lại
         showCheckBox();
         ivLogo.startAnimation(ivLogoShow);
@@ -227,6 +223,10 @@ public class MainActivity extends AppCompatActivity {
                 btPlay.startAnimation(btPlayHidden);
                 tvBackGround.startAnimation(tvBackGroundHidden);
                 ivLogo.startAnimation(ivLogoHidden);
+                // cho các con vật về vị trí ban đầu
+                sbCho.setProgress(0);
+                sbHeo.setProgress(0);
+                sbHuou.setProgress(0);
                 // làm cho các chẹckbox không thểm tác động được
                 hiddenCheckBox();
                 // chạy countdown time
