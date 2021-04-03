@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TH2-Bai_2</string>
+    <string name="main_textView_1">Đặt thức ăn và đồ uống</string>
+    <string name="main_button_1">Chọn thức ăn</string>
+    <string name="main_button_2">Chọn đồ uống</string>
+    <string name="main_button_3">Thoát</string>
+    <string name="food_textView_1">Chọn đồ ăn</string>
+    <string name="food_radioButton_1">Phở Hà Nội</string>
+    <string name="food_radioButton_2">Bún Bò Huế</string>
+    <string name="food_radioButton_3">Mì Quảng</string>
+    <string name="food_radioButton_4">Hủ Tíu Sài Gòn</string>
+    <string name="food_button_1">Đặt món</string>
+    <string name="drink_textView_1">Chọn đồ uống</string>
+    <string name="drink_radioButton_1">Pepsi</string>
+    <string name="drink_radioButton_2">Heineken</string>
+    <string name="drink_radioButton_3">Tiger</string>
+    <string name="drink_radioButton_4">Sài Gòn Đỏ</string>
+    <string name="drink_button_1">Chọn đồ uống</string>
+</resources>
