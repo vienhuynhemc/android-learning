@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DocBao</string>
+    <string name="editText_1">Nhập link</string>
+    <string name="button_1">OK</string>
+</resources>
