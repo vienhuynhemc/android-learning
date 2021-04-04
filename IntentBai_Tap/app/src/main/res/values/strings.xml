@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Intent-Bai_Tap</string>
+    <string name="main_textView_1">Chọn hình bên dưới để xác nhận hình bên trên</string>
+    <string name="main_textView_2">100</string>
+    <string-array name="array_hinh">
+        <item>chim1</item>
+        <item>chim2</item>
+        <item>chim3</item>
+        <item>chim4</item>
+        <item>chim5</item>
+        <item>chim6</item>
+        <item>chim7</item>
+        <item>chim8</item>
+        <item>chim9</item>
+        <item>chim10</item>
+        <item>chim11</item>
+        <item>chim12</item>
+        <item>chim13</item>
+        <item>chim14</item>
+        <item>chim15</item>
+    </string-array>
+</resources>
