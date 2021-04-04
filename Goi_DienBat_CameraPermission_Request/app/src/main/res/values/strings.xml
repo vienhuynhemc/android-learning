@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Goi_Dien-Bat_Camera-Permission_Request</string>
+    <string name="main_editText_1">Nhập số điện thoại để gọi điện</string>
+    <string name="main_button_1">Gọi</string>
+    <string name="main_button_2">Chụp hình</string>
+    <string name="main_imageView_1">Hình ảnh</string>
+</resources>
