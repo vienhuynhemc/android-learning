@@ -1,3 +1,29 @@
 <resources>
+    <string-array name="name_img">
+        <item>https://i.pinimg.com/originals/71/c8/3e/71c83eb1998178ddf407b13fdadc7617.png</item>
+        <item>https://c1.klipartz.com/pngpicture/778/692/sticker-png-angry-birds-seasons-angry-birds-rio-angry-birds-space-angry-birds-2-video-games-bad-piggies-angry-birds-movie-angry-birds-toons.png</item>
+        <item>https://www.nicepng.com/png/detail/2-21959_angry-birds-png-angry-bird-png.png</item>
+        <item>https://banner2.cleanpng.com/20180624/blf/kisspng-angry-birds-2-angry-birds-friends-angry-birds-go-angry-birds-blueson-target-s1-ep13-new-5b2febd7a09b28.5924491215298672236579.jpg</item>
+        <item>https://appsgag.com/public/images/1567333713.Angry%20Birds%20logo.png</item>
+        <item>https://static.wixstatic.com/media/2cd43b_e391082129bb40e8a8361fa777a5949b~mv2.png/v1/fill/w_640,h_334,fp_0.50_0.50,q_95/2cd43b_e391082129bb40e8a8361fa777a5949b~mv2.png</item>
+        <item>https://icon2.cleanpng.com/20180325/ogq/kisspng-angry-birds-friends-angry-birds-action-angry-bird-angry-birds-5ab7fb329a7bb7.4167795515220068346328.jpg</item>
+        <item>https://static.wixstatic.com/media/2cd43b_d01118ebd83440118fd2892391554522~mv2.png/v1/fill/w_640,h_430,fp_0.50_0.50,q_95/2cd43b_d01118ebd83440118fd2892391554522~mv2.png</item>
+        <item>https://toppng.com/uploads/preview/angry-birds-pink-bird-11549949375fxovrple6k.png</item>
+        <item>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSre2ILPJXApepJoX-1zIpfzNKD0HMf9nGd6Q&amp;usqp=CAU</item>
+        <item>https://www.vhv.rs/dpng/d/431-4319841_angry-birds-flying-transparent-png-angry-birds-transparent.png</item>
+        <item>https://banner2.cleanpng.com/20190627/iks/kisspng-angry-birds-drawing-clip-art-image-graphic-download-angry-baseball-clipart-yellow-a-5d156b827e4c32.2536732915616848665173.jpg</item>
+        <item>https://www.pngfind.com/pngs/m/85-853102_angry-bird-png-angry-birds-movie-cake-transparent.png</item>
+        <item>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjD4wQD2uj8YEuheIyG0hYU0Hsc5Ei44dY1g&amp;usqp=CAU</item>
+        <item>https://www.pngfind.com/pngs/m/83-833932_free-icons-png-angry-birds-pig-png-transparent.png</item>
+        <item>https://banner2.cleanpng.com/20180430/clq/kisspng-angry-birds-northern-cardinal-clip-art-5ae70790b62010.996106071525090192746.jpg</item>
+        <item>https://www.seekpng.com/png/detail/406-4062743_cara-anime-png-cara-angry-birds-png.png</item>
+        <item>https://png.pngitem.com/pimgs/s/355-3551097_the-bad-piggies-a-angry-birds-pig-png.png</item>
+        <item>https://w7.pngwing.com/pngs/989/675/png-transparent-angry-birds-star-wars-ii-angry-birds-stella-angry-birds-space-angry-birds-logo-vertebrate-fictional-character.png</item>
+        <item>https://e7.pngegg.com/pngimages/542/228/png-clipart-angry-birds-star-wars-ii-angry-birds-stella-parrot-decoration-white-food.png</item>
+        <item>https://www.pikpng.com/pngl/m/111-1119102_angry-bird-png-terence-from-angry-birds-clipart.png</item>
+        <item>https://png.pngtree.com/png-clipart/20200701/original/pngtree-cartoon-hand-drawn-angry-bird-png-image_5434556.jpg</item>
+        <item>https://www.pinclipart.com/picdir/middle/538-5382786_yellow-bird-angry-birds-characters-character-angry-bird.png</item>
+    </string-array>
     <string name="app_name">AsyncTask_LoadImageInternet</string>
+    <string name="button_1">Tải hình</string>
 </resources>
