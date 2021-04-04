@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Luu_Du_lieu_voi-Shared_Preferences</string>
+    <string name="textView_1">Đăng nhập tài khoản</string>
+    <string name="editText_1">Tài khoản</string>
+    <string name="editText_2">Mật khẩu</string>
+    <string name="checkBox_1">Nhớ mật khẩu</string>
+    <string name="button_1">Đăng nhập</string>
+    <string name="textView_2">Đăng nhập thành công</string>
+</resources>
