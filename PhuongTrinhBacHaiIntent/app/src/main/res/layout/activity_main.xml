@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFEB3B"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/textView_1"
+        android:textAlignment="center"
+        android:textColor="#F44336"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="#4B66FB"
+        android:text="@string/textView_2"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_1" />
+
+    <EditText
+        android:id="@+id/editText_1"
+        android:hint="@string/editText_1"
+        android:layout_width="0dp"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textView_2"
+        app:layout_constraintTop_toBottomOf="@id/textView_1"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/textView_3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="#4B66FB"
+        android:text="@string/textView_3"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_2" />
+
+    <EditText
+        android:id="@+id/editText_2"
+        android:hint="@string/editText_1"
+        android:layout_width="0dp"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textView_3"
+        app:layout_constraintTop_toBottomOf="@id/textView_2"
+        tools:ignore="Autofill" />
+
+
+    <TextView
+        android:id="@+id/textView_4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="#4B66FB"
+        android:text="@string/textView_4"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_3" />
+
+    <EditText
+        android:id="@+id/editText_3"
+        android:hint="@string/editText_1"
+        android:layout_width="0dp"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textView_4"
+        app:layout_constraintTop_toBottomOf="@id/textView_3"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/button_1"
+        android:background="@drawable/ic_baseline_play_circle_outline_24"
+        app:layout_constraintTop_toBottomOf="@id/editText_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PhuongTrinhBacHaiIntent</string>
+    <string name="textView_1">Giải phương trình bậc 2</string>
+    <string name="textView_2">Nhập số A:</string>
+    <string name="editText_1">Một con số</string>
+    <string name="textView_3">Nhập số B:</string>
+    <string name="textView_4">Nhập số C:</string>
+    <string name="button_2">Trở lại</string>
+</resources>
