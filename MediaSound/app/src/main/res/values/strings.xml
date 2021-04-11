@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MediaSound</string>
+    <string name="button_1">Play</string>
+    <string name="button_2">STOP</string>
+</resources>
