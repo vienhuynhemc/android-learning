@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BT1-TH2-Thay_Toan</string>
+    <string name="textView_1">Đây là Main Activity</string>
+    <string name="button_1">Chuyển đến activity 2</string>
+    <string name="textView_2">Đây là Main-2 Activity</string>
+    <string name="button_2">Trở lại Activity 1</string>
+</resources>
