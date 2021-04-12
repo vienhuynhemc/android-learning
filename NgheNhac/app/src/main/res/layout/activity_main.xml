@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#170f23"
+    tools:context=".MainActivity">
+
+    <AutoCompleteTextView
+        android:id="@+id/main_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/back_ground_search"
+        android:hint="@string/main_search"
+        android:maxLines="1"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:textColor="#dadada"
+        android:textColorHint="#dadada"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_listNhac"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintHeight_max="300dp"
+        app:layout_constraintTop_toBottomOf="@id/main_search" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:id="@+id/main_cartView"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_listNhac">
+
+        <ImageView
+            android:id="@+id/main_hinhNhac"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/background"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/main_tenSeries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_tenSeries"
+        app:layout_constraintTop_toBottomOf="@id/main_cartView"
+        android:textColor="#ebeaec"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/main_ngayCapNhat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ngày cập nhật: 09/04/2000"
+        app:layout_constraintTop_toBottomOf="@id/main_tenSeries"
+        android:textColor="#78747f"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textSize="12sp"/>n
+
+    <TextView
+        android:id="@+id/main_soNguoiYeuThich"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="683 gười yêu thích"
+        app:layout_constraintTop_toBottomOf="@id/main_ngayCapNhat"
+        android:textColor="#78747f"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"
+        android:textSize="12sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
