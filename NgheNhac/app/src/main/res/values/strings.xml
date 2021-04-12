@@ -2,4 +2,18 @@
     <string name="app_name">NgheNhac</string>
     <string name="main_search">Nhập tên bài hát, nghệ sĩ</string>
     <string name="main_tenSeries">Chạm Series: Yêu Lại Người Yêu Cữ</string>
+    <string name="main_ngayCapNhat">Ngày cập nhật: 09/04/2000</string>
+    <string name="main_soNguoiYeuThich">683 gười yêu thích</string>
+    <string name="textView_time">00:00</string>
+    <string-array name="ten_danh_sach_nhac">
+        <item>noi_do_con_cho_em</item>
+        <item>sau_tat_ca</item>
+        <item>yeu_lai_nguoi_yeu_cu</item>
+        <item>yeu_lai_nguoi_yeu_cu_loi_dan_1</item>
+        <item>yeu_lai_nguoi_yeu_cu_loi_dan_2</item>
+        <item>yeu_lai_nguoi_yeu_cu_loi_dan_3</item>
+        <item>yeu_lai_nguoi_yeu_cu_loi_ket</item>
+        <item>yeu_lai_tu_dau</item>
+        <item>yeu_mot_nguoi_co_le</item>
+    </string-array>
 </resources>

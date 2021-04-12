@@ -35,8 +35,8 @@
         app:layout_constraintTop_toBottomOf="@id/main_search" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
         android:id="@+id/main_cartView"
+        android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="10dp"
         app:cardCornerRadius="150dp"
@@ -56,35 +56,128 @@
         android:id="@+id/main_tenSeries"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/main_tenSeries"
-        app:layout_constraintTop_toBottomOf="@id/main_cartView"
-        android:textColor="#ebeaec"
-        android:textStyle="bold"
         android:layout_marginTop="20dp"
+        android:text="@string/main_tenSeries"
         android:textAlignment="center"
-        android:textSize="20sp"/>
+        android:textColor="#ebeaec"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/main_cartView" />
 
     <TextView
         android:id="@+id/main_ngayCapNhat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ngày cập nhật: 09/04/2000"
-        app:layout_constraintTop_toBottomOf="@id/main_tenSeries"
-        android:textColor="#78747f"
         android:layout_marginTop="5dp"
+        android:text="@string/main_ngayCapNhat"
         android:textAlignment="center"
-        android:textSize="12sp"/>n
+        android:textColor="#78747f"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/main_tenSeries" />
 
     <TextView
         android:id="@+id/main_soNguoiYeuThich"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="683 gười yêu thích"
-        app:layout_constraintTop_toBottomOf="@id/main_ngayCapNhat"
-        android:textColor="#78747f"
         android:layout_marginTop="5dp"
+        android:text="@string/main_soNguoiYeuThich"
         android:textAlignment="center"
-        android:textSize="12sp"/>
+        android:textColor="#78747f"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/main_ngayCapNhat" />
+
+    <TextView
+        android:id="@+id/main_thoiGianDaChay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/textView_time"
+        android:textColor="#6c6872"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/main_thoiGianToiDa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/textView_time"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/thoi_gian"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progress="10"
+        android:progressBackgroundTint="#5a5561"
+        android:progressTint="@color/white"
+        android:thumbTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/main_thoiGianDaChay"
+        app:layout_constraintEnd_toStartOf="@id/main_thoiGianToiDa"
+        app:layout_constraintStart_toEndOf="@id/main_thoiGianDaChay"
+        app:layout_constraintTop_toTopOf="@id/main_thoiGianDaChay" />
+
+    <ImageView
+        android:id="@+id/button_play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_baseline_play_circle_outline_24"
+        app:layout_constraintBottom_toTopOf="@id/thoi_gian"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/button_next"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_skip_next_24"
+        app:layout_constraintBottom_toBottomOf="@id/button_play"
+        app:layout_constraintStart_toEndOf="@id/button_play"
+        app:layout_constraintTop_toTopOf="@id/button_play"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/button_random"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_shuffle_24"
+        app:layout_constraintBottom_toBottomOf="@id/button_play"
+        app:layout_constraintStart_toEndOf="@id/button_next"
+        app:layout_constraintTop_toTopOf="@id/button_play"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/button_pre"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_skip_previous_24"
+        app:layout_constraintBottom_toBottomOf="@id/button_play"
+        app:layout_constraintEnd_toStartOf="@id/button_play"
+        app:layout_constraintTop_toTopOf="@id/button_play"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/button_repeat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_360_24"
+        app:layout_constraintBottom_toBottomOf="@id/button_play"
+        app:layout_constraintEnd_toStartOf="@id/button_pre"
+        app:layout_constraintTop_toTopOf="@id/button_play"
+        tools:ignore="ContentDescription" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

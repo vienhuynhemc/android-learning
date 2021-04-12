@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutViewHolder"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#170f23">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/viewHolder_cartView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/viewHolder_imageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/yeu_lai_nguoi_yeu_cu"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/viewHolder_buttonPlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#51000000"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            android:visibility="invisible" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/viewHolder_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#ebeaec"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/viewHolder_cartView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/viewHolder_tenCaSy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#78747f"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/viewHolder_cartView"
+        app:layout_constraintTop_toBottomOf="@id/viewHolder_name" />
+
+    <TextView
+        android:id="@+id/viewHolder_thoiGian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="#78747f"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#423951"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
