@@ -17,6 +17,7 @@
         android:background="@drawable/back_ground_search"
         android:hint="@string/main_search"
         android:maxLines="1"
+        android:completionThreshold="1"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:textColor="#dadada"
@@ -177,7 +178,6 @@
         app:layout_constraintEnd_toStartOf="@id/button_pre"
         app:layout_constraintTop_toTopOf="@id/button_play"
         tools:ignore="ContentDescription" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

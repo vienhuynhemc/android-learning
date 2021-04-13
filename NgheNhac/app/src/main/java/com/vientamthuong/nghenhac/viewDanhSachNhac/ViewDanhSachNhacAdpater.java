@@ -44,6 +44,18 @@ public class ViewDanhSachNhacAdpater extends RecyclerView.Adapter<ViewDanhSachNh
         holder.getTextViewTenCaSy().setText(music.getTenCaSi());
         holder.getTextViewThoiGian().setText(music.getTime());
         holder.getImageViewHinhNhac().setImageResource(music.getIdImage());
+        holder.getView().setOnClickListener(v -> {
+            Music m=  mainActivity.getDanhSachNhac().get(position);
+            int postion = 0;
+            for (int i = 0; i < mainActivity.getDanhSachNhac().size(); i++) {
+                if (mainActivity.getDanhSachNhac().get(i).getName().equals(music.getName())) {
+                    postion = i;
+                    break;
+                }
+            }
+            mainActivity.setNowPosition(postion);
+            mainActivity.createAudio(postion);
+        });
     }
 
     @Override

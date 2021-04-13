@@ -19,10 +19,12 @@ public class ViewDanhSachNhacViewHolder extends RecyclerView.ViewHolder {
     private TextView textViewTenBaiHat;
     private TextView textViewThoiGian;
     private ConstraintLayout layout;
+    private View view;
     private AppCompatImageButton buttonPlay;
 
     public ViewDanhSachNhacViewHolder(@NonNull View itemView) {
         super(itemView);
+        this.view = itemView;
         getView(itemView);
     }
 
@@ -81,5 +83,9 @@ public class ViewDanhSachNhacViewHolder extends RecyclerView.ViewHolder {
 
     public void setLayout(ConstraintLayout layout) {
         this.layout = layout;
+    }
+
+    public View getView() {
+        return view;
     }
 }

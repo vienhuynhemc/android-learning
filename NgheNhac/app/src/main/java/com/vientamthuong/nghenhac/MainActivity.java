@@ -17,6 +17,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.vientamthuong.nghenhac.model.Music;
+import com.vientamthuong.nghenhac.viewAutoSearch.ViewAutoSearchAdapter;
 import com.vientamthuong.nghenhac.viewDanhSachNhac.ViewDanhSachNhacAdpater;
 
 import java.util.ArrayList;
@@ -78,8 +79,17 @@ public class MainActivity extends AppCompatActivity {
         viewDanhSachNhac();
         // tải danh sách nhạc
         loadData();
+        // view autocomplete
+        autoComplete();
         // action
         action();
+    }
+
+    private void autoComplete() {
+        List<Music> newList = new ArrayList<>();
+        newList.addAll(danhSachNhac);
+        ViewAutoSearchAdapter viewAutoSearchAdapter = new ViewAutoSearchAdapter(MainActivity.this, R.layout.custom_view_holder, newList, this);
+        autoCompleteTextViewSearch.setAdapter(viewAutoSearchAdapter);
     }
 
     private void next() {
@@ -290,7 +300,7 @@ public class MainActivity extends AppCompatActivity {
         }, 500);
     }
 
-    private void createAudio(int position) {
+    public void createAudio(int position) {
         for (Music music : danhSachNhac) {
             if (music.isSelect()) music.setSelect(false);
             if (music.isPlay()) music.setPlay(false);
@@ -312,6 +322,7 @@ public class MainActivity extends AppCompatActivity {
         textViewThoiGianDaSuDung.setText("00:00");
         textViewThoiGianToiDa.setText(coverTimeToString(nowMedia.getDuration()));
         seekBarThoiGian.setMax(nowMedia.getDuration());
+        viewDanhSachNhacAdpater.notifyDataSetChanged();
     }
 
     private String coverTimeToString(long duration) {
@@ -357,5 +368,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void setState(int state) {
         this.state = state;
+    }
+
+    public int getNowPosition() {
+        return nowPosition;
+    }
+
+    public void setNowPosition(int nowPosition) {
+        this.nowPosition = nowPosition;
+    }
+
+    public AutoCompleteTextView getAutoCompleteTextViewSearch() {
+        return autoCompleteTextViewSearch;
     }
 }
