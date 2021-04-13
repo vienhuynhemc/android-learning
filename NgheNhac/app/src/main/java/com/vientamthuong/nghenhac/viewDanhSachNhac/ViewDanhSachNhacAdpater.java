@@ -31,6 +31,14 @@ public class ViewDanhSachNhacAdpater extends RecyclerView.Adapter<ViewDanhSachNh
         if (music.isSelect()) {
             holder.getLayout().setBackgroundColor(mainActivity.getColor(R.color.select));
             holder.getButtonPlay().setVisibility(View.VISIBLE);
+        } else {
+            holder.getLayout().setBackgroundColor(mainActivity.getColor(R.color.dontSelect));
+            holder.getButtonPlay().setVisibility(View.INVISIBLE);
+        }
+        if (music.isPlay()) {
+            holder.getButtonPlay().setImageResource(R.drawable.ic_baseline_pause_24);
+        } else {
+            holder.getButtonPlay().setImageResource(R.drawable.ic_baseline_play_arrow_24);
         }
         holder.getTextViewTenBaiHat().setText(music.getName());
         holder.getTextViewTenCaSy().setText(music.getTenCaSi());

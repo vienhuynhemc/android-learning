@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AutoCompleteTextView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -18,6 +21,7 @@ import com.vientamthuong.nghenhac.viewDanhSachNhac.ViewDanhSachNhacAdpater;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewThoiGianToiDa;
     private ImageView imageViewRandom;
     private ImageView imageViewRepeat;
+    private ImageView buttonPlay;
+    private ImageView hinhNen;
+    private ImageView buttoNext;
+    private ImageView buttonPre;
     // Data
     // List danh sach cac bai hat
     private List<Music> danhSachNhac;
@@ -42,6 +50,13 @@ public class MainActivity extends AppCompatActivity {
     private boolean isReapeat;
     // Bản nhạc hiện tại
     private MediaPlayer nowMedia;
+    private int nowPosition;
+    // random
+    private Random random;
+    // animation
+    private Animation quayHinhNen;
+    // handle
+    private Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +71,91 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        // tải danh sách nhạc
-        loadData();
+        handler = new Handler();
+        random = new Random();
+        quayHinhNen = AnimationUtils.loadAnimation(MainActivity.this, R.anim.hinh_nen_quay);
         // danhsachnhac
         viewDanhSachNhac();
+        // tải danh sách nhạc
+        loadData();
         // action
         action();
     }
 
+    private void next() {
+        if (isRandom) {
+            int newIndex = random.nextInt(danhSachNhac.size());
+            while (newIndex == nowPosition) {
+                newIndex = random.nextInt(danhSachNhac.size());
+            }
+            createAudio(newIndex);
+            viewDanhSachNhacAdpater.notifyDataSetChanged();
+        } else {
+            if (nowPosition < danhSachNhac.size()) {
+                nowPosition++;
+            }
+            if (nowPosition == danhSachNhac.size()) {
+                if (isReapeat) {
+                    nowPosition = 0;
+                    createAudio(nowPosition);
+                } else {
+                    state = PAUSE;
+                    hinhNen.clearAnimation();
+                    buttonPlay.setImageResource(R.drawable.ic_baseline_play_circle_outline_24);
+                    nowMedia.pause();
+                    if (nowPosition == danhSachNhac.size()) {
+                        danhSachNhac.get(nowPosition - 1).setPlay(false);
+                    } else if (nowPosition == -1) {
+                        danhSachNhac.get(nowPosition + 1).setPlay(false);
+                    } else {
+                        danhSachNhac.get(nowPosition).setPlay(false);
+                    }
+                    viewDanhSachNhacAdpater.notifyDataSetChanged();
+                }
+            } else {
+                createAudio(nowPosition);
+                viewDanhSachNhacAdpater.notifyDataSetChanged();
+            }
+        }
+    }
+
+    private void pre() {
+        if (isRandom) {
+            int newIndex = random.nextInt(danhSachNhac.size());
+            while (newIndex == nowPosition) {
+                newIndex = random.nextInt(danhSachNhac.size());
+            }
+            createAudio(newIndex);
+            viewDanhSachNhacAdpater.notifyDataSetChanged();
+        } else {
+            if (nowPosition > -1) {
+                nowPosition--;
+            }
+            if (nowPosition == -1) {
+                if (isReapeat) {
+                    nowPosition = danhSachNhac.size() - 1;
+                    createAudio(nowPosition);
+                } else {
+                    state = PAUSE;
+                    hinhNen.clearAnimation();
+                    buttonPlay.setImageResource(R.drawable.ic_baseline_play_circle_outline_24);
+                    nowMedia.pause();
+                    if (nowPosition == -1) {
+                        danhSachNhac.get(nowPosition + 1).setPlay(false);
+                    } else {
+                        danhSachNhac.get(nowPosition).setPlay(false);
+                    }
+                    viewDanhSachNhacAdpater.notifyDataSetChanged();
+                }
+            } else {
+                createAudio(nowPosition);
+                viewDanhSachNhacAdpater.notifyDataSetChanged();
+            }
+        }
+    }
+
     private void action() {
+        // button
         imageViewRandom.setOnClickListener(v -> {
             if (isRandom) {
                 isRandom = false;
@@ -83,6 +174,65 @@ public class MainActivity extends AppCompatActivity {
                 imageViewRepeat.setImageResource(R.drawable.ic_baseline_360_24_select);
             }
         });
+        // media
+        nowMedia.setOnCompletionListener(mp -> {
+            next();
+        });
+        // play
+        buttonPlay.setOnClickListener(v -> {
+            if (state == START) {
+                nowMedia.pause();
+                state = PAUSE;
+                buttonPlay.setImageResource(R.drawable.ic_baseline_play_circle_outline_24);
+                hinhNen.clearAnimation();
+                if (nowPosition == danhSachNhac.size()) {
+                    danhSachNhac.get(nowPosition - 1).setPlay(false);
+                } else if (nowPosition == -1) {
+                    danhSachNhac.get(nowPosition + 1).setPlay(false);
+                } else {
+                    danhSachNhac.get(nowPosition).setPlay(false);
+                }
+                viewDanhSachNhacAdpater.notifyDataSetChanged();
+            } else {
+                state = START;
+                hinhNen.startAnimation(quayHinhNen);
+                buttonPlay.setImageResource(R.drawable.ic_baseline_pause_circle_outline_24);
+                if (nowPosition == danhSachNhac.size()) {
+                    createAudio(nowPosition - 1);
+                } else if (nowPosition == -1) {
+                    danhSachNhac.get(nowPosition + 1).setPlay(false);
+                }
+                nowMedia.start();
+                if (nowPosition == danhSachNhac.size()) {
+                    danhSachNhac.get(nowPosition - 1).setPlay(true);
+                } else if (nowPosition == -1) {
+                    danhSachNhac.get(nowPosition + 1).setPlay(false);
+                } else {
+                    danhSachNhac.get(nowPosition).setPlay(true);
+                }
+                viewDanhSachNhacAdpater.notifyDataSetChanged();
+            }
+        });
+        // seekbar
+        seekBarThoiGian.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                nowMedia.seekTo(seekBar.getProgress());
+            }
+        });
+        // next
+        buttoNext.setOnClickListener(v -> next());
+        buttonPre.setOnClickListener(v -> pre());
     }
 
     private void viewDanhSachNhac() {
@@ -129,14 +279,36 @@ public class MainActivity extends AppCompatActivity {
 
     private void first() {
         createAudio(0);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                seekBarThoiGian.setProgress(nowMedia.getCurrentPosition());
+                String nowTime = coverTimeToString(nowMedia.getCurrentPosition());
+                textViewThoiGianDaSuDung.setText(nowTime);
+                handler.postDelayed(this, 500);
+            }
+        }, 500);
     }
 
     private void createAudio(int position) {
         for (Music music : danhSachNhac) {
             if (music.isSelect()) music.setSelect(false);
+            if (music.isPlay()) music.setPlay(false);
         }
         danhSachNhac.get(position).setSelect(true);
-        nowMedia = MediaPlayer.create(MainActivity.this, danhSachNhac.get(position).getIdSound());
+        if (nowMedia == null) {
+            nowMedia = MediaPlayer.create(MainActivity.this, danhSachNhac.get(position).getIdSound());
+        } else {
+            nowMedia.stop();
+            nowMedia.release();
+            nowMedia = MediaPlayer.create(MainActivity.this, danhSachNhac.get(position).getIdSound());
+            nowMedia.setOnCompletionListener(mp -> next());
+            recyclerViewList.scrollToPosition(position);
+        }
+        if (state == START) {
+            nowMedia.start();
+            danhSachNhac.get(position).setPlay(true);
+        }
         textViewThoiGianDaSuDung.setText("00:00");
         textViewThoiGianToiDa.setText(coverTimeToString(nowMedia.getDuration()));
         seekBarThoiGian.setMax(nowMedia.getDuration());
@@ -165,6 +337,10 @@ public class MainActivity extends AppCompatActivity {
         textViewThoiGianToiDa = findViewById(R.id.main_thoiGianToiDa);
         imageViewRandom = findViewById(R.id.button_random);
         imageViewRepeat = findViewById(R.id.button_repeat);
+        buttonPlay = findViewById(R.id.button_play);
+        hinhNen = findViewById(R.id.main_hinhNhac);
+        buttoNext = findViewById(R.id.button_next);
+        buttonPre = findViewById(R.id.button_pre);
     }
 
     public List<Music> getDanhSachNhac() {

@@ -7,6 +7,7 @@ public class Music {
     private int idSound;
     private String time;
     private String tenCaSi;
+    private boolean isPlay;
     private boolean isSelect;
 
     public Music(int idImage, String name, int idSound, String time, String tenCaSi) {
@@ -64,4 +65,13 @@ public class Music {
     public void setSelect(boolean select) {
         isSelect = select;
     }
+
+    public boolean isPlay() {
+        return isPlay;
+    }
+
+    public void setPlay(boolean play) {
+        isPlay = play;
+    }
+
 }
