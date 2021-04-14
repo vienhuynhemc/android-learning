@@ -2,10 +2,16 @@ package com.vientamthuong.game2d_learning;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
+import android.widget.ImageView;
 
-import com.vientamthuong.game2d_learning.loadData.LoadAnimation;
+import com.vientamthuong.game2d_learning.gameWorld.GameSurface;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // Xóa status bar
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
-        LoadAnimation loadAnimation = new LoadAnimation(MainActivity.this);
-        loadAnimation.loadAnimation();
+        setContentView(new GameSurface(this, this));
     }
+
+
 }
