@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="100dp">
+
+    <TextView
+        android:id="@+id/ten_thuoc_tinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loai_thuoc_tinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/ten_thuoc_tinh" />
+
+    <EditText
+        android:id="@+id/oNhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dữ liệu"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/loai_thuoc_tinh"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
