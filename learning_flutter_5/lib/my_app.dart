@@ -1,10 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:learning_flutter_5/list_transaction.dart';
 import 'package:learning_flutter_5/transaction.dart';
 
 class MyApp extends StatefulWidget {
+  List<Transaction> transactions;
+
   @override
   State<StatefulWidget> createState() {
+    transactions = [];
     return _MyAppState();
   }
 }
@@ -41,6 +45,21 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     }
   }
 
+  void _addNewTransaction() {
+    setState(() {
+      if (_transactionState.content.isEmpty ||
+          _transactionState.amount == 0.0 ||
+          _transactionState.amount.isNaN) {
+        return;
+      }
+      _amountController.text = "";
+      _contentController.text = "";
+      showSnackBar();
+      widget.transactions.add(_transactionState);
+      _transactionState = Transaction();
+    });
+  }
+
   void showSnackBar() {
     _messengerSateKey.currentState.showSnackBar(
       SnackBar(
@@ -54,11 +73,39 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Learning 5",
-      home: Scaffold(
-        backgroundColor: Colors.white,
-        body: ScaffoldMessenger(
-          key: _messengerSateKey,
-          child: SafeArea(
+      home: ScaffoldMessenger(
+        key: _messengerSateKey,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("Menu"),
+            actions: [
+              IconButton(
+                icon: Icon(Icons.add),
+                onPressed: () {
+                  _addNewTransaction();
+                },
+                tooltip: "Add New Transaction",
+              ),
+              IconButton(
+                icon: Icon(Icons.edit),
+                onPressed: () {},
+                tooltip: "Edit Transaction",
+                padding: EdgeInsets.only(right: 50),
+                color: Colors.purple,
+                iconSize: 40,
+              ),
+            ],
+          ),
+          floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.add),
+            elevation: 10,
+            tooltip: "Add new transaction",
+            onPressed: () {
+              _addNewTransaction();
+            },
+          ),
+          backgroundColor: Colors.white,
+          body: SafeArea(
             minimum: EdgeInsets.only(left: 20, top: 30, right: 20, bottom: 30),
             child: SingleChildScrollView(
               child: Column(
@@ -93,18 +140,15 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                         padding: MaterialStateProperty.all(EdgeInsets.symmetric(
                             vertical: 20, horizontal: 40))),
                     onPressed: () {
-                      setState(() {
-                        _amountController.text = "";
-                        _contentController.text = "";
-                        showSnackBar();
-                        _messengerSateKey.currentState
-                            .showSnackBar(SnackBar(content: Text("abc")));
-                      });
+                      _addNewTransaction();
                     },
                     child: Text(
                       "Lấy dữ liệu",
                       style: TextStyle(color: Colors.white),
                     ),
+                  ),
+                  ListTransaction(
+                    transactions: widget.transactions,
                   ),
                 ],
               ),
