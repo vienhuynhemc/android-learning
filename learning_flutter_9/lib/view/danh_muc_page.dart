@@ -4,6 +4,9 @@ import 'package:learning_flutter_9/data/fake_data.dart';
 import 'package:learning_flutter_9/view/danh_muc_item.dart';
 
 class DanhMucPage extends StatelessWidget {
+
+  static String routerName = "/DanhMucPage";
+
   GridView _createGridView() {
     return GridView.builder(
       itemCount: danhMucs.length,
