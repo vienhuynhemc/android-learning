@@ -1,0 +1,2 @@
+rootProject.name = "Learning Fragment 3"
+include ':app'

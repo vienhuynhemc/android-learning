@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add A" />
+
+        <Button
+            android:id="@+id/addB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add B" />
+
+        <Button
+            android:id="@+id/addC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add C" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/rA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="r A" />
+
+        <Button
+            android:id="@+id/rB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="r B" />
+
+        <Button
+            android:id="@+id/rC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="r C" />
+
+        <Button
+            android:id="@+id/popA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pop A" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/f1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
