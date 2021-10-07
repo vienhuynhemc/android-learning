@@ -1,3 +1,6 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
 class SanPham {
   String tenSanPham;
   int giaSanPham;
@@ -9,7 +12,17 @@ class SanPham {
     required this.ngayTao,
   });
 
-  String getNgayTaoString(){
+  String getNgayTaoString() {
     return '${ngayTao.day}/${ngayTao.month}/${ngayTao.year}';
+  }
+}
+
+class KeySnackbar {
+  static KeySnackbar key = KeySnackbar();
+
+  GlobalKey<ScaffoldMessengerState> globalKey = GlobalKey();
+
+  static KeySnackbar getInstance() {
+    return key;
   }
 }

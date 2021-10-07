@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Learning Fluttter 4",
       home: MyHomePage(),
+      scaffoldMessengerKey: KeySnackbar.getInstance().globalKey,
     );
   }
 }
@@ -30,16 +31,6 @@ class _MyHomePageState extends State<MyHomePage> {
       giaSanPham: 200,
       ngayTao: DateTime.now(),
     ),
-    SanPham(
-      tenSanPham: "ABC",
-      giaSanPham: 200,
-      ngayTao: DateTime.now(),
-    ),
-    SanPham(
-      tenSanPham: "ABC",
-      giaSanPham: 200,
-      ngayTao: DateTime.now(),
-    ),
   ];
 
   void _themSanPham() {
@@ -51,7 +42,112 @@ class _MyHomePageState extends State<MyHomePage> {
           ngayTao: DateTime.now(),
         ),
       );
+      Navigator.of(context).pop();
+      KeySnackbar.getInstance().globalKey.currentState!.showSnackBar(SnackBar(
+            content: Text("Thêm sản phẩm thành công"),
+            duration: Duration(seconds: 1),
+          ));
     });
+  }
+
+  void _showBottomSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Column(
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 30,
+                vertical: 30,
+              ),
+              child: TextField(
+                controller: tenSanPhamController,
+                onChanged: (value) {
+                  _tenSanPham = value;
+                },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                  labelText: "Tên sản phẩm",
+                ),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 30,
+              ),
+              child: TextField(
+                controller: giaSanPhamController,
+                onChanged: (value) {
+                  _giaSanPham = int.tryParse(value) ?? 0;
+                },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                  labelText: "Giá sản phẩm",
+                ),
+              ),
+            ),
+            Container(
+              width: 300,
+              child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
+                  shadowColor: Colors.greenAccent,
+                  color: Colors.green,
+                  elevation: 10,
+                  margin: EdgeInsets.fromLTRB(
+                    0,
+                    30,
+                    0,
+                    0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(
+                        onPressed: _themSanPham,
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.add,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                            Container(
+                              margin: EdgeInsets.symmetric(
+                                vertical: 10,
+                                horizontal: 10,
+                              ),
+                              child: Text(
+                                "Thêm sản phẩm",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )),
+            ),
+          ],
+        );
+      },
+    );
   }
 
   ListView _taoListView() {
@@ -151,45 +247,6 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 30,
-                ),
-                child: TextField(
-                  controller: tenSanPhamController,
-                  onChanged: (value) {
-                    _tenSanPham = value;
-                  },
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                    ),
-                    labelText: "Tên sản phẩm",
-                  ),
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                  horizontal: 30,
-                ),
-                child: TextField(
-                  controller: giaSanPhamController,
-                  onChanged: (value) {
-                    _giaSanPham = int.tryParse(value) ?? 0;
-                  },
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                    ),
-                    labelText: "Giá sản phẩm",
-                  ),
-                ),
-              ),
-              Container(
                 width: 300,
                 child: Card(
                     shape: RoundedRectangleBorder(
@@ -210,7 +267,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         TextButton(
-                          onPressed: _themSanPham,
+                          onPressed: _showBottomSheet,
                           child: Row(
                             children: [
                               Icon(
