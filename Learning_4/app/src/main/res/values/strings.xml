@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ứng dụng 4</string>
+    <string name="textView_1">Đang ở Activity 1</string>
+    <string name="textView_2">Đang ở Activity 2</string>
+    <string name="button_1">Ấn để đến Activity 2</string>
+    <string name="button_2">Lưu</string>
+</resources>

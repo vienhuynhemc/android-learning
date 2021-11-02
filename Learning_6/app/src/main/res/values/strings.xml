@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ứng dụng 6</string>
+    <string name="textView_1">Loại biến nào để đặt tên cho một thành phồ</string>
+    <string name="checkBox_1">int</string>
+    <string name="checkBox_2">double</string>
+    <string name="checkBox_3">String</string>
+    <string name="checkBox_4">Tất cả các phương án</string>
+    <string name="button_1">Kết quả</string>
+    <string name="button_2">Gợi ý</string>
+</resources>

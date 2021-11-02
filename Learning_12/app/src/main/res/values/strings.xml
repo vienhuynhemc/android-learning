@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ứng dụng 12</string>
+    <string name="textView_1">Đăng nhập</string>
+    <string name="editText_1">Username</string>
+    <string name="editText_2">password</string>
+    <string name="button_1">Đăng nhập</string>
+    <string name="button_2">Quên MK</string>
+    <string name="button_3">Trợ giúp</string>
+</resources>

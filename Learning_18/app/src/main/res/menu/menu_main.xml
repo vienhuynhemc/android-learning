@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Dòng 1"
+        android:orderInCategory="2"
+        android:id="@+id/menu_1"
+        app:showAsAction="always" />
+
+    <item
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Dòng 2"
+        android:id="@+id/menu_2"
+        app:showAsAction="always" />
+</menu>

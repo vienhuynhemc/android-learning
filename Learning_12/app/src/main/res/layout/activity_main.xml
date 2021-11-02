@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10sp"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40sp"
+        android:text="@string/textView_1"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_1"
+        android:hint="@string/editText_1"
+        android:inputType="text"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/editText_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_1"
+        android:hint="@string/editText_2"
+        android:inputType="textPassword"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_2"
+        android:layout_toStartOf="@id/button_2"
+        android:text="@string/button_1" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_2" />
+
+    <Button
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText_2"
+        android:layout_toEndOf="@id/button_2"
+        android:text="@string/button_3" />
+
+</RelativeLayout>

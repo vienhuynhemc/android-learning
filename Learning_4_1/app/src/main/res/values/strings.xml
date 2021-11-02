@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ứng dụng 4.1</string>
+    <string name="textView_1">Bạn đang ở Activity 1</string>
+    <string name="button_1">Đến Activity 2</string>
+    <string name="button_2">Đến Activiy 3</string>
+    <string name="button_3">Trở về Activity 1</string>
+    <string name="button_4">Lưu</string>
+    <string name="editText_1">Dữ liệu từ Activity 2</string>
+</resources>

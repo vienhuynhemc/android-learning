@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ứng dụng 7</string>
+    <string name="textView_1">Chọn giá trị của biếu thức sau: Math.abs(Math.min(-6,3))</string>
+    <string name="radioButton_1">6</string>
+    <string name="radioButton_2">3</string>
+    <string name="radioButton_3">-6</string>
+    <string name="textView_2">Bạn hãy chọn một phương án</string>
+    <string name="button_1">Kết quả</string>
+</resources>

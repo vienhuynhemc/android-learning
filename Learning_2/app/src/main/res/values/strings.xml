@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ứng dụng 2</string>
+    <string name="editText1">Điền nội dung công việc ở đây</string>
+    <string name="textView1">Giờ</string>
+    <string name="editText2">12</string>
+    <string name="textView2">Phút</string>
+    <string name="editText3">00</string>
+    <string name="button">Thêm công việc</string>
+</resources>

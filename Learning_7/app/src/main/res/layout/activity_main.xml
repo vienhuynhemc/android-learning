@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="40px"
+    tools:ignore="PxUsage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textView_1" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButton_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20px"
+            android:text="@string/radioButton_1"
+            tools:ignore="RtlSymmetry" />
+
+
+        <RadioButton
+            android:id="@+id/radioButton_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20px"
+            android:text="@string/radioButton_2"
+            tools:ignore="RtlSymmetry" />
+
+
+        <RadioButton
+            android:id="@+id/radioButton_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20px"
+            android:text="@string/radioButton_3"
+            tools:ignore="RtlSymmetry" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:text="@string/textView_2" />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:text="@string/button_1" />
+
+</LinearLayout>

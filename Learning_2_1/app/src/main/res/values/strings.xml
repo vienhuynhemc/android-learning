@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ứng dụng 2.1</string>
+    <string name="editText_1">Nhập nội dung công việc ở đây</string>
+    <string name="editText_2">12</string>
+    <string name="editText_3">00</string>
+    <string name="textView_1">Giờ</string>
+    <string name="textView_2">Phút</string>
+    <string name="button">Thêm công việc</string>
+</resources>

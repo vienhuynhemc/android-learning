@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Ứng dụng 10.1</string>
+    <string name="button_1">Xóa sản phẩm đầu tiền</string>
+    <string name="button_2">Xóa mục đã chọn</string>
+</resources>

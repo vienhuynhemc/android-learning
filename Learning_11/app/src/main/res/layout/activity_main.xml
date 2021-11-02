@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:stretchColumns="1">
+
+
+    <TableRow>
+
+        <TextView
+            android:layout_span="3"
+            android:text="@string/textVIew_1"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:text="@string/textView_2"
+            android:textStyle="bold" />
+
+        <EditText
+            android:hint="@string/editText_1"
+            android:inputType="text"
+            tools:ignore="Autofill" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:text="@string/textView_3"
+            android:textStyle="bold" />
+
+        <EditText
+            android:hint="@string/editText_2"
+            android:inputType="textPassword"
+            tools:ignore="Autofill" />
+    </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FD2F71"
+            android:text="@string/button_1"
+            android:textColor="@color/white" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4E1A0E"
+            android:text="@string/button_2"
+            android:textColor="@color/white" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4E1A0E"
+            android:text="@string/button_3"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</TableLayout>

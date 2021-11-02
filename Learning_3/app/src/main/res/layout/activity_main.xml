@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editText_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/editText_1"
+        android:inputType="text"
+        android:lines="1"
+        tools:ignore="Autofill" />
+
+    <!-- Layout điền giờ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_1"
+            android:textSize="50px"
+            tools:ignore="PxUsage" />
+
+        <EditText
+            android:id="@+id/editText_2"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40px"
+            android:gravity="center"
+            android:hint="@string/editText_2"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            tools:ignore="Autofill,PxUsage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textView_2"
+            android:textSize="50px"
+            tools:ignore="PxUsage" />
+
+        <EditText
+            android:id="@+id/editText_3"
+            android:layout_width="120px"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/editText_3"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="2"
+            tools:ignore="Autofill,PxUsage" />
+
+    </LinearLayout>
+    <!-- Kết thức layout điền giờ -->
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20px"
+        android:text="@string/button_1"
+        android:textAllCaps="false"
+        tools:ignore="PxUsage" />
+
+    <ListView
+        android:id="@+id/listView_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

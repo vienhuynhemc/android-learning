@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ứng dụng 15</string>
+    <string name="menu_1">Thay đổi phần tử số 3</string>
+    <string name="menu_2">Chèn mới vị trí số 2</string>
+    <string name="menu_3">Xóa phần từ đầu tiên</string>
+    <string name="menu_4">Danh sách 7 phần tử mới</string>
+    <string name="menu_5">Đến phần từ cuối</string>
+    <string name="menu_6">Đi xuống 20sp</string>
+</resources>

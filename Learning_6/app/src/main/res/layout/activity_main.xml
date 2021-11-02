@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:text="@string/textView_1"
+        tools:ignore="PxUsage" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkBox_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20px"
+        android:layout_marginTop="50px"
+        android:button="@drawable/state_checkbox"
+        android:paddingStart="20px"
+        android:text="@string/checkBox_1"
+        tools:ignore="PxUsage,RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkBox_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20px"
+        android:layout_marginTop="50px"
+        android:button="@drawable/state_checkbox"
+        android:paddingStart="20px"
+        android:text="@string/checkBox_2"
+        tools:ignore="PxUsage,RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkBox_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20px"
+        android:layout_marginTop="50px"
+        android:button="@drawable/state_checkbox"
+        android:paddingStart="20px"
+        android:text="@string/checkBox_3"
+        tools:ignore="PxUsage,RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/checkBox_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20px"
+        android:layout_marginTop="50px"
+        android:button="@drawable/state_checkbox"
+        android:paddingStart="20px"
+        android:text="@string/checkBox_4"
+        tools:ignore="PxUsage,RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:text="@string/button_1"
+        tools:ignore="PxUsage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_2" />
+
+</LinearLayout>

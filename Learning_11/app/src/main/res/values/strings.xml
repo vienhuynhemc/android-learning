@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ứng dung 11</string>
+    <string name="textVIew_1">Đăng nhập</string>
+    <string name="textView_2">Username</string>
+    <string name="textView_3">Password</string>
+    <string name="editText_1">nhập id</string>
+    <string name="editText_2">nhập mật khẩu</string>
+    <string name="button_1">Ok</string>
+    <string name="button_2">Hủy</string>
+    <string name="button_3">Quên MK</string>
+</resources>
